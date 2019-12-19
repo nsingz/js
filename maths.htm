@@ -1,0 +1,92 @@
+<html>
+<meta name=keywords value="maths, add, subtract, multiply, divide, Zimbabwe, education, learn, aptitude ">
+<script>
+//copyright nsingz.byethost6.com 2019
+//alert(window.location.href);
+//alert ("noErrors");
+var tt=window.location. href;
+var nn=tt.indexOf("ngz.b");
+tt=tt.substr(nn,7);
+;
+nn=(tt.charCodeAt(5));
+nn+=(tt.charCodeAt(3));
+//alert(nn);
+var plenty=false;
+var max=0;
+var char; 
+function ad()
+{
+var big=[250,350,400,450,500,100,300,600,700];
+var mid=[80,50,30,25,20,40,60,70,75];
+var small=[1,4,6,7,10,2,3,5,8];
+var tea=true;
+var num;
+var word=document.getElementById("gg").value;
+//alert(word);
+if (word=="BIG")
+//while (tea)
+{
+ num=Math.floor((nn-159)*(Math.random())+1);//nn-166))10);//
+if (num>9) num=Math.floor (num/10);//*(nn-166)
+
+
+//alert("big="+num);
+char=big[num];
+
+}//if big
+else
+if (word=="med")
+{
+ num=Math.floor((nn-159)*Math.random()+1);//nn-166))10);//
+if (num>9) num=Math.floor (num/10);//*(nn-166)
+
+	char=mid[num];
+//alert (char);
+}//med
+else
+{
+ num=(nn-159);
+num=Math.floor(num*Math.random()+1);//nn-166))10);//
+if (num>9) num=Math.floor (num/10);//*(nn-166)
+	char=small[num];
+//alert (char);
+}//else med
+if (plenty)
+{
+plenty=!plenty;
+document.getElementById("word").innerHTML="";
+}//plenty
+max++;
+if (max==1)
+{
+ num=Math.floor((nn)*(1000)*Math.random()+1);//
+document.getElementById("t").innerHTML=num;
+}//if max1
+if (max>8)
+{
+alert("find the biggest word from the leters","ns");
+plenty=true;
+if (document.getElementById("Player").innerHTML=="<font color=purple>Player1")
+document.getElementById("Player").innerHTML="<font color=green>Player2";
+else
+document.getElementById("Player").innerHTML="<font color=purple>Player1";
+max=0;
+}//max8
+document.getElementById("word").innerHTML+=","+char;
+}//function 
+</script><h1 style = "color:green;" > 
+
+ nsingz.byethost6.com<br>
+Calculating  game
+</h1> 
+<a href=nsingz.byethost6.com>homepage </a><br>
+
+<H2>IT is better played by at least 2 people taking turns to select the type of numbers whether big or small or medium numbers to use addition subtraction multiplication and division,power or root to come up with a nmber nearer to the given numbers.</h2>
+<p>Given number<div id=t></div>
+<p><div id=Player><font color=purple>Player1</div></font>
+select<select id=gg ><option value="BIG">big  </option> <option value="med">medium</option> <option value="small">small</option>  </select> <button onclick=ad();>Add number</button >
+<br><p>Results displayed here
+<p><div id=word></div>
+<p>Copyright Nelson Singini December 2019
+
+</body>

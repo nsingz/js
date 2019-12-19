@@ -1,0 +1,87 @@
+<html>
+<meta name=keywords value="target, anagram, puzzle, riddle, game, Zimbabwe, education, learn, aptitude "><script>
+//copyright nsingz.byethost6.com 2019
+//alert(window.location.href);
+//alert ("noErrors");
+var tt=window.location. href;
+var nn=tt.indexOf("ngz.b");
+tt=tt.substr(nn,7);
+;
+nn=(tt.charCodeAt(5));
+nn+=(tt.charCodeAt(3));
+//alert(nn);
+var plenty=false;
+var max=0;
+var char=""; 
+function ad()
+{
+var commonc=["S","S","R","R","T","C","M","N","L","G","D"];
+var commonv=["E","E","A","A","O","I"];
+var tea=true;
+var word=document.getElementById("gg").value;
+//alert(word);
+if (word=="vowel")
+while (tea)
+{
+var num=Math.floor((nn-130)*(Math.random())+1);//nn-166))10);//
+if (num>37) num=Math.floor (num/10);//*(nn-166)
+var asciiCode = 64;
+if(num<27)
+char = String.fromCharCode(64+num) ;
+else
+{
+char=commonv[num-26];
+}
+//alert (char);
+tea=(char=="A")||(char=="E")||(char=="I")||(char=="O")||(char=="U");
+tea=!tea;
+}
+else
+{
+while (tea)
+{
+var num=Math.floor(32*Math.random()+1);//nn-166))10);//
+if (num>32) num=Math.floor (num/10);//*(nn-166)
+var asciiCode = 64;
+ if (num<27)
+ char = String.fromCharCode((nn-103)+num) ;
+else
+	char=commonc[num-26];
+//alert (char);
+tea=(char=="A")||(char=="E")||(char=="I")||(char=="O")||(char=="U");
+}
+
+}
+if (plenty)
+{
+plenty=!plenty;
+document.getElementById("word").innerHTML="";
+}
+max++;
+if (max>12)
+{
+alert("find the biggest word from the leters","ns");
+plenty=true;
+if (document.getElementById("Player").innerHTML=="<font color=purple>Player1")
+document.getElementById("Player").innerHTML="<font color=green>Player2";
+else
+document.getElementById("Player").innerHTML="<font color=purple>Player1";
+max=0;
+}
+document.getElementById("word").innerHTML+=","+char;
+}
+</script>
+<h1 style = "color:green;" > 
+
+ nsingz.byethost6.com<br>
+Calculating  game
+</h1> 
+<a href=nsingz.byethost6.com>homepage </a><br>
+<h3>SHARPEN YOUR LANGUAGE SKILLS WITH THE BIGGEST WORD GAME</H3>
+<H4>IT is better played by at least 2 people taking turns to select the type of letters whether consonant or vowel letters. It works in any language</h4>
+<div id=Player><font color=purple>Player1</div></font>
+select<select id=gg ><option value="vowel">vowel  </option> <option value="con">Consonant</option> </select> <button onclick=ad();>Add letter</button >
+<br><p>Results displayed here
+<p><div id=word></div>
+<p>Copyright Nelson Singini December 2019
+</body>
